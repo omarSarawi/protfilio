@@ -1,0 +1,104 @@
+.section-volunteering {
+  padding: 6rem 2rem;
+}
+
+.section-volunteering.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(240, 240, 240, 0.87);
+  margin-bottom: 4rem;
+}
+
+.volunteering-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.volunteer-card {
+  position: relative;
+  background: rgba(35, 38, 59, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 2rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  
+  transform-style: preserve-3d;
+  transition: transform 0.1s linear;
+}
+
+.volunteer-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.volunteer-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1px;
+}
+
+.volunteer-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(234, 234, 234, 0.87);
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.volunteer-info.volunteer-date {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(160, 160, 160, 0.6);
+  margin: 0.25rem 0 0;
+}
+
+.volunteer-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(208, 208, 208, 0.87);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+.volunteer-card:hover {
+  transform: perspective(1000px) rotateX(var(--rotateX, 0)) rotateY(var(--rotateY, 0));
+}
+
+.volunteer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at var(--mouseX, 50%) var(--mouseY, 50%),
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0) 30%
+  );
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; 
+}
+
+.volunteer-card:hover::before {
+  opacity: 1;
+}

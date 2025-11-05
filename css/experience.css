@@ -1,0 +1,63 @@
+.section-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 20px; 
+    margin-bottom: 30px;
+}
+
+.experience-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px; 
+    height: 100%; 
+    background-color: #00bfff; 
+    border-radius: 2px;
+}
+
+.experience-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.company-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.date-of-joining {
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.training.content {
+    margin-top: 10px;
+    padding-left: 10px;
+    line-height: 1.5;
+    color: #eee;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .experience-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .experience-title {
+        flex: 0 0 200px; 
+        padding-right: 20px;
+    }
+    .training.content {
+        padding-left: 0;
+        flex: 1;
+    }
+}

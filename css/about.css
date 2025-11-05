@@ -1,0 +1,111 @@
+  /* background: radial-gradient(circle at top left, #0f172a, #020617); */
+
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f5f9;
+  padding: 80px 20px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.about-title span {
+  background: linear-gradient(to right, #93c5fd, #f9fafb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #9ca3af;
+  margin-bottom: 25px;
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.about-description {
+  max-width: 700px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  margin-bottom: 35px;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.highlight {
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+.about-actions {
+  animation: fadeInUp 1.8s ease-out forwards;
+}
+
+.about-socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.about-icon {
+  font-size: 1.8rem;
+  color: #f1f5f9;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-icon:hover {
+  color: #60a5fa;
+  transform: scale(1.2);
+}
+
+.about-button {
+  display: inline-block; 
+  padding: 12px 30px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none; 
+}
+
+.about-button:hover {
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

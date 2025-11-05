@@ -1,0 +1,82 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at center, #0b0b2b 10%, #000 90%);
+}
+
+body {
+  overflow-x: hidden; 
+  overflow-y: auto;  
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.9;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.5));
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes moveStarLayer1 {
+  from { transform: translateY(-10vh); }
+  to   { transform: translateY(105vh); }
+}
+
+@keyframes moveStarLayer2 {
+  from { transform: translateY(-15vh); }
+  to   { transform: translateY(110vh); }
+}
+
+@keyframes moveStarLayer3 {
+  from { transform: translateY(-20vh); }
+  to   { transform: translateY(120vh); }
+}
+
+/* ---------------------------------------------
+---  إضافة كود شريط التمرير المخصص  ---
+---------------------------------------------
+*/
+
+/* --- لمتصفحات Chrome, Safari, Edge --- */
+
+/* تحديد العرض */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* لون المسار (الخلفية) - استخدمنا لون الخلفية الداكن من الكود الخاص بك */
+body::-webkit-scrollbar-track {
+  background: #0b0b2b;
+}
+
+/* لون وشكل المقبض المتحرك */
+body::-webkit-scrollbar-thumb {
+  background-color: #6366F1; /* اللون البنفسجي ليتناسب مع الأزرار */
+  border-radius: 20px;
+  border: 3px solid #0b0b2b; /* إطار بنفس لون الخلفية */
+}
+
+/* عند تمرير الماوس فوق المقبض */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #7f82f3;
+}
+
+/* --- لمتصفح Firefox --- */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #6366F1 #0b0b2b; /* [لون المقبض] [لون الخلفية] */
+}
